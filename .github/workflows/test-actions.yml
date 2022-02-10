@@ -5,3 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Heihei"
+
+      - name: Check out Git repository
+      uses: actions/checkout@v2
+      - name: Lint Action
+      uses: wearerequired/lint-action@v1.11.1
+

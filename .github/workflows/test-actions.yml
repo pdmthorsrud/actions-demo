@@ -1,13 +1,17 @@
 name: Test actions workflow
 on: [push]
 jobs:
-  test-job:
+  print-test:
+    name: Test of echo
     runs-on: ubuntu-latest
     steps:
       - run: echo "Heihei"
 
-      - name: Check out Git repository
-      uses: actions/checkout@v2
-      - name: Lint Action
-      uses: wearerequired/lint-action@v1.11.1
+
+  linter:
+    uses: github/super-linter@v4
+    env:
+      VALIDATE_ALL_CODEBASE: false
+      DEFAULT_BRANCH: master
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

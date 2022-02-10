@@ -4,4 +4,4 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - run echo "Heihei"
+      - run: echo "Heihei"

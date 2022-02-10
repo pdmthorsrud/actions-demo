@@ -1,0 +1,7 @@
+name: Testing of actions
+on: [push]
+jobs:
+  testing-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world"
